@@ -1,0 +1,203 @@
+:root {
+  --green: #70ff91;
+  --yellow: #86af49;
+  --cyan: #4cc9fe;
+  --light: #f8f9fa;
+  --bg: #347928;
+  --bg2: #fff100;
+  --dark: #343a40;
+  --gray: #6c757d;
+  --box: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  --box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(0, 0, 0, 0.4);
+  --box-light: 1px 1px 5px rgba(255, 255, 255, 0.8),
+    -1px -1px 5px rgba(255, 255, 255, 0.8);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.main .side-bar {
+  width: 200px;
+  background-color: var(--light);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+.main .side-bar .header-logo {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.main .side-bar .header-logo h3 {
+  color: var(--dark);
+}
+.main .side-bar .menu {
+  display: flex;
+  flex-direction: column;
+}
+.main .side-bar .menu span {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark);
+  margin-top: 20px;
+  cursor: context-menu;
+}
+.main .side-bar .menu .menu-item {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--dark);
+  text-align: center;
+}
+.main .side-bar .menu .menu-item a {
+  text-decoration: none;
+  color: var(--dark);
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+}
+.main .side-bar .menu .menu-item:hover {
+  background-color: var(--bg);
+  box-shadow: var(--box-shadow);
+}
+.main .side-bar .menu .menu-item:hover a {
+  color: var(--light);
+}
+.main .side-bar .menu .active {
+  background-color: var(--bg);
+  box-shadow: var(--box-shadow);
+}
+.main .side-bar .menu .active a {
+  color: var(--light);
+}
+.main .main-bar {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 120px 1fr;
+  place-items: center;
+}
+.main .main-bar .graph {
+  grid-row: 3/4;
+  grid-column: 1/4;
+  box-shadow: var(--box-shadow);
+  height: 100%;
+  width: 100%;
+  background-color: var(--light);
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+.main .main-bar .graph .header-notif {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--bg);
+}
+.main .main-bar .total-students {
+  height: 18vh;
+  width: 20vw;
+  border-radius: 10px;
+  background-color: var(--green);
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  box-shadow: var(--box-shadow);
+}
+.main .main-bar .total-students .left {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .total-students .left i {
+  text-shadow: 2px 2px 1px var(--light);
+  color: var(--bg);
+  font-size: 70px;
+}
+.main .main-bar .total-students .right {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .total-category {
+  height: 18vh;
+  width: 20vw;
+  border-radius: 10px;
+  background-color: var(--cyan);
+  box-shadow: var(--box);
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  box-shadow: var(--box-shadow);
+}
+.main .main-bar .total-category .left {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .total-category .left i {
+  text-shadow: 1px 1px 1px var(--light);
+  color: var(--bg);
+  font-size: 70px;
+}
+.main .main-bar .total-category .right {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .total-products {
+  height: 18vh;
+  width: 20vw;
+  border-radius: 10px;
+  background-color: var(--yellow);
+  box-shadow: var(--box);
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  box-shadow: var(--box-shadow);
+}
+.main .main-bar .total-products .left {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .total-products .left i {
+  text-shadow: 2px 2px 1px var(--light);
+  color: var(--bg);
+  font-size: 70px;
+}
+.main .main-bar .total-products .right {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .daily-sales {
+  height: 18vh;
+  width: 20vw;
+  background-color: var(--bg2);
+  box-shadow: var(--box);
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+.main .main-bar .daily-sales .left {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}
+.main .main-bar .daily-sales .left i {
+  color: var(--bg);
+  font-size: 50px;
+}
+.main .main-bar .daily-sales .right {
+  display: grid;
+  grid-template-rows: 1fr 40%;
+  place-items: center;
+}/*# sourceMappingURL=admin_dashboard.css.map */

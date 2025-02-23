@@ -1,0 +1,113 @@
+:root {
+  --primary: #fffbe6;
+  --light: #f8f9fa;
+  --bg: #347928;
+  --bg2: #e0ffda;
+  --yellow: #fff;
+  --gray: #6c757d;
+  --box: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  --box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(0, 0, 0, 0.4);
+  --box-light: 1px 1px 5px rgba(255, 255, 255, 0.8),
+    -1px -1px 5px rgba(255, 255, 255, 0.8);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.main .side-bar {
+  width: 200px;
+  background-color: var(--light);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+.main .side-bar .header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main .side-bar .header-logo h3 {
+  color: var(--dark);
+}
+.main .side-bar .menu {
+  display: flex;
+  flex-direction: column;
+}
+.main .side-bar .menu span {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark);
+  margin-top: 20px;
+  cursor: context-menu;
+}
+.main .side-bar .menu .menu-item {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--dark);
+  text-align: center;
+}
+.main .side-bar .menu .menu-item a {
+  text-decoration: none;
+  color: var(--dark);
+  flex-grow: 1;
+  display: flex;
+  justify-content: start;
+}
+.main .side-bar .menu .menu-item:hover {
+  background-color: var(--bg);
+  box-shadow: var(--box-shadow);
+}
+.main .side-bar .menu .menu-item:hover a {
+  color: var(--light);
+}
+.main .side-bar .menu .active {
+  background-color: var(--bg);
+  box-shadow: var(--box-shadow);
+}
+.main .side-bar .menu .active a {
+  color: var(--light);
+}
+.main .main-bar {
+  padding: 1%;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 10px;
+}
+.main .main-bar .category-box {
+  height: 95vh;
+  padding: 1%;
+  overflow: auto;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  background-color: transparent;
+}
+.main .main-bar .category-box table {
+  border-radius: 10px;
+}
+.main .main-bar .category-box table thead th {
+  background-color: var(--bg);
+}
+.main .main-bar .category-count {
+  height: 95vh;
+  padding: 2%;
+  overflow: auto;
+  scrollbar-width: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+}/*# sourceMappingURL=admin_category.css.map */

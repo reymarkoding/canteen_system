@@ -1,0 +1,101 @@
+:root {
+  --bg: #347928;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  overflow: auto;
+  width: 360px;
+  background-color: var(--bg);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+.main .header {
+  margin-top: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+.main .registration-body {
+  padding: 5%;
+}
+.main .registration-body form {
+  display: flex;
+  flex-direction: column;
+}
+.main .registration-body form .done {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 5px;
+  margin: 0 2vw;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+}
+.main .registration-body form .box-form {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.main .registration-body form .box-form label {
+  color: var(--light);
+  text-align: center;
+}
+.main .registration-body form .box-form input {
+  border: none;
+  border-radius: 2px;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 8px;
+  margin: 5px 5px 5px 5px;
+}
+.main .registration-body form .box-form input::-webkit-input-placeholder {
+  color: var(--light);
+  opacity: 80%;
+}
+.main .registration-body form .box-form a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .registration-body form .box-form {
+  margin-top: 10px;
+}
+.main .registration-body form .box-form button {
+  box-shadow: 1px 1px 5px 1px var(--gray), -1px -1px 5px 1px var(--gray);
+  background-color: var(--dark);
+  border: none;
+  border-radius: 5px;
+  color: var(--light);
+  align-self: center;
+  width: 75%;
+  padding: 8px;
+  margin: 25px 0;
+  transition: 0.1s ease-out;
+  cursor: pointer;
+}
+.main .registration-body form .box-form button:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.1s ease-in;
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=student_register.css.map */

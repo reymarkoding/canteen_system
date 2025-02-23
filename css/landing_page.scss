@@ -1,0 +1,118 @@
+:root {
+  --primary: #fdc323;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.login-popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  height: 50vh;
+  width: 30vw;
+  background-color: var(--dark);
+
+  .popup-content {
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+
+    .popup-header {
+      grid-row: 1/2;
+      color: var(--light);
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .popup-body {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .input-item {
+          margin: 8px 0;
+          select {
+            padding: 5px;
+            width: 100%;
+          }
+
+          input[type="password"] {
+            padding: 2px 5px;
+            width: 100%;
+          }
+        }
+        button {
+          position: absolute;
+          bottom: 20%;
+          padding: 5px;
+          width: 50%;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.close-btn {
+  color: var(--light);
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+.main-body-header {
+  height: 12vh;
+  width: 100vw;
+  position: fixed;
+  background-color: var(--gray);
+  display: grid;
+  grid-template-columns: 200px 1fr 200px 20px;
+  place-items: center;
+
+  .header-logo {
+    background-image: url(final_logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header-menu {
+    grid-column: 3/4;
+    display: flex;
+
+    button {
+      padding: 5px;
+      border: none;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4),
+        -1px -1px 5px rgba(0, 0, 0, 0.4);
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+
+      a {
+        margin: 0 5px;
+        text-decoration: none;
+        color: var(--dark);
+      }
+    }
+  }
+}
+.main-body {
+  height: 100vh;
+  background-color: var(--light);
+
+  .main-body-hero {
+  }
+}

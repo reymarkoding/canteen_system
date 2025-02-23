@@ -1,0 +1,124 @@
+:root {
+  --bg: #347928;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+  --box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(0, 0, 0, 0.4);
+  --box-light: 1px 1px 5px rgba(255, 255, 255, 0.8),
+    -1px -1px 5px rgba(255, 255, 255, 0.8);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  height: 100vh;
+  background-color: var(--light);
+  display: grid;
+  place-items: center;
+}
+.main .canteen_id {
+  grid-row: 2/3;
+  overflow: visible;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #347928;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+}
+.main .canteen_id p.scanteen {
+  opacity: 50%;
+}
+.main .canteen_id .header {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .canteen_id .header span {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--light);
+  font-size: 24px;
+  font-weight: bold;
+}
+.main .canteen_id .body {
+  display: grid;
+  grid-template-rows: 20px 1fr 1fr;
+  place-items: center;
+}
+.main .canteen_id .body .header {
+  grid-row: 1/2;
+  background-color: var(--light);
+}
+.main .canteen_id .body .header span {
+  margin: 0;
+  font-size: 10px;
+  color: var(--bg);
+}
+.main .canteen_id .body .qrcode {
+  grid-row: 2/3;
+  border: 1px solid var(--bg);
+  padding: 5%;
+  box-shadow: var(--box-shadow);
+}
+.main .canteen_id .body .prof_pic {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_header {
+  background-color: var(--bg);
+  position: fixed;
+  height: 12vh;
+  width: 100vw;
+  box-shadow: var(--box-shadow);
+  display: grid;
+  grid-auto-flow: column;
+}
+.main_header .header_logo {
+  color: var(--light);
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  place-items: center;
+}
+.main_header .helper_click {
+  grid-column: 3/4;
+  display: grid;
+  place-items: center;
+}
+.main_header .helper_click i {
+  color: var(--light);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.main_header .header_menu.hide {
+  display: none;
+}
+.main_header .header_menu {
+  position: fixed;
+  background: var(--bg);
+  height: auto;
+  width: 100vw;
+  top: 12vh;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 35px;
+}
+.main_header .header_menu a {
+  text-decoration: none;
+  color: var(--light);
+  width: 100vw;
+  padding-left: 2vw;
+}
+.main_header .header_menu a:hover {
+  text-decoration: none;
+  background-color: var(--gray);
+  width: 100vw;
+}/*# sourceMappingURL=student_profile.css.map */
